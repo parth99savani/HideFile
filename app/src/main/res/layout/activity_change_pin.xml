@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ChangePinActivity">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/etPinLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:passwordToggleEnabled="true"
+        android:layout_marginTop="25dp"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginBottom="10dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editPin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter the pin"
+            android:maxLength="8"
+            android:minLines="4"
+            android:inputType="numberPassword"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/etConfirmPinLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:passwordToggleEnabled="true"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginVertical="10dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editConfirmPin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Re-Enter the pin"
+            android:maxLength="8"
+            android:minLines="4"
+            android:inputType="numberPassword"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!--EditText
+        android:id="@+id/editPin"
+        android:inputType="numberPassword"
+        android:maxLength="8"
+        android:minLines="4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter the pin"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginVertical="10dp" /-->
+
+    <!--EditText
+        android:id="@+id/editConfirmPin"
+        android:inputType="numberPassword"
+        android:maxLength="8"
+        android:minLines="4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Re-Enter the pin"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginVertical="10dp"/-->
+
+    <Button
+        android:id="@+id/btnSavePin"
+        android:text="Save"
+        android:textColor="@android:color/white"
+        android:ems="10"
+        android:backgroundTint="@color/colorPrimary"
+        android:background="@drawable/bg_button"
+        android:textAllCaps="false"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"/>
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/ad_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="50dp"
+        app:adSize="BANNER"
+        app:adUnitId="ca-app-pub-3940256099942544/6300978111"/>
+
+</LinearLayout>

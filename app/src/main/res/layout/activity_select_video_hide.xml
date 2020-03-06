@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SelectVideoHideActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:elevation="10dp"
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize">
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:src="@drawable/ic_back"
+            android:background="@android:color/transparent"
+            android:layout_width="?actionBarSize"
+            android:layout_height="?actionBarSize"/>
+
+        <Spinner
+            android:id="@+id/spinnerFolder"
+            android:backgroundTint="@android:color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/btnBack"
+            android:layout_toLeftOf="@id/rlRadiobtn"
+            style="@style/Widget.AppCompat.Spinner"/>
+
+        <RelativeLayout
+            android:id="@+id/rlRadiobtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:visibility="gone"
+            android:layout_marginRight="10dp">
+
+            <RadioButton
+                android:id="@+id/radioBtnAll"
+                android:layout_width="wrap_content"
+                android:layout_height="?actionBarSize"
+                android:buttonTint="@android:color/white"
+                android:text="5"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:clickable="false"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewVideo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl"
+        android:layout_above="@id/ad_view"/>
+
+    <Button
+        android:visibility="gone"
+        android:id="@+id/btnHide"
+        android:text="Hide"
+        android:textSize="15sp"
+        android:ems="8"
+        android:textColor="@android:color/white"
+        android:textAllCaps="false"
+        android:layout_above="@id/ad_view"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="18dp"
+        android:background="@drawable/bg_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/ad_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        app:adSize="BANNER"
+        app:adUnitId="ca-app-pub-3940256099942544/6300978111"/>
+
+</RelativeLayout>

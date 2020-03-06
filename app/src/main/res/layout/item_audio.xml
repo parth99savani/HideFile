@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:layout_margin="5dp">
+
+    <TextView
+        android:id="@+id/txtAudioType"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:text="MP3"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        android:background="#F67B2F"
+        android:gravity="center"
+        android:layout_centerVertical="true"/>
+
+    <TextView
+        android:id="@+id/txtAudioName"
+        android:text="audio"
+        android:textSize="15dp"
+        android:textColor="@android:color/black"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:layout_toLeftOf="@+id/rlRadiobtnSelect"
+        android:layout_toRightOf="@+id/txtAudioType"/>
+
+    <RelativeLayout
+        android:id="@+id/rlRadiobtnSelect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true">
+
+        <RadioButton
+            android:id="@+id/radiobtnSelect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@android:color/black"
+            android:clickable="false"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

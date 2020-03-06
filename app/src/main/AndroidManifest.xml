@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.popseven.hidefile">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Calculator"
+        android:manageSpaceActivity=".MainActivity"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-3940256099942544~3347511713" />
+        <activity android:name=".ChangePinActivity"
+            android:label="Change Pin"
+            android:parentActivityName=".SettingsActivity"
+            android:theme="@style/MyTheme"></activity>
+        <activity
+            android:name=".SettingsActivity"
+            android:label="Settings"
+            android:parentActivityName=".HomeActivity"
+            android:theme="@style/MyTheme" />
+        <activity android:name=".SelectDocHideActivity" />
+        <activity android:name=".DocHideActivity" />
+        <activity android:name=".DocFolderListActivity" />
+        <activity android:name=".SelectAudioHideActivity" />
+        <activity android:name=".AudioHideActivity" />
+        <activity android:name=".AudioFolderListActivity" />
+        <activity android:name=".SelectVideoHideActivity" />
+        <activity android:name=".VideoHideActivity" />
+        <activity android:name=".VideoFolderListActivity" />
+        <activity android:name=".SelectImageHideActivity" />
+        <activity android:name=".ImageHideActivity" />
+        <activity android:name=".ImageFolderListActivity" />
+        <activity android:name=".HomeActivity" />
+        <activity android:name=".SplashActivity" />
+        <activity
+            android:name=".MainActivity"
+            android:clearTaskOnLaunch="true"
+            android:excludeFromRecents="true">
+        </activity>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <receiver android:name=".reciever.MyOutgoingCallHandler">
+            <intent-filter>
+                <action android:name="android.intent.action.NEW_OUTGOING_CALL" />
+            </intent-filter>
+        </receiver>
+
+        <activity-alias
+            android:name=".Launcher"
+            android:targetActivity=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+
+
+    </application>
+
+</manifest>

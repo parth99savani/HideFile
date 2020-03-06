@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".SettingsActivity">
+
+    <TextView
+        android:id="@+id/txtChangePin"
+        android:text="Change pin"
+        android:textColor="@android:color/black"
+        android:textSize="17sp"
+        android:paddingVertical="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="30dp"
+        android:layout_marginVertical="8dp"
+        android:elevation="1dp"
+        android:background="@android:color/white"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="5"
+        android:elevation="1dp"
+        android:background="@android:color/white">
+
+        <TextView
+            android:text="Hide app icon"
+            android:layout_weight="1"
+            android:textColor="@android:color/black"
+            android:textSize="17sp"
+            android:paddingVertical="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="30dp"
+            android:layout_marginVertical="5dp"
+            android:background="@android:color/white"/>
+
+        <Switch
+            android:id="@+id/switchHideIcon"
+            android:layout_weight="4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="20dp"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/txtInfo"
+        android:text="To launch the app again, dial phone number #YourPin#  like '#0000#' "
+        android:textSize="15sp"
+        android:paddingVertical="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="30dp"
+        android:background="@android:color/white"/>
+
+    <TextView
+        android:id="@+id/txtShare"
+        android:text="Share this app"
+        android:textColor="@android:color/black"
+        android:textSize="17sp"
+        android:paddingVertical="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="30dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/white"
+        android:elevation="1dp"/>
+
+    <TextView
+        android:id="@+id/txtPolicy"
+        android:text="Privacy Policy"
+        android:textColor="@android:color/black"
+        android:textSize="17sp"
+        android:paddingVertical="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="30dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/white"
+        android:elevation="1dp"/>
+
+    <TextView
+        android:id="@+id/txtRateUs"
+        android:text="Rate Us"
+        android:textColor="@android:color/black"
+        android:textSize="17sp"
+        android:paddingVertical="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="30dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/white"
+        android:elevation="1dp"/>
+
+    <TextView
+        android:id="@+id/txtMoreApps"
+        android:text="More Apps"
+        android:textColor="@android:color/black"
+        android:textSize="17sp"
+        android:paddingVertical="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="30dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/white"
+        android:elevation="1dp"/>
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/ad_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        app:adSize="BANNER"
+        app:adUnitId="ca-app-pub-3940256099942544/6300978111"/>
+
+</LinearLayout>
